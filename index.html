@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LB COSMETICS | Boutique premium</title>
+    <meta
+      name="description"
+      content="LB COSMETICS, boutique premium de soins, savons, sérums et perruques haut de gamme."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="LB COSMETICS">
+        <img src="assets/logo-lb-cosmetics.png" alt="Logo LB COSMETICS" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" data-nav>
+        <a href="#boutique">Boutique</a>
+        <a href="#rituels">Rituels</a>
+        <a href="#resultats">Résultats</a>
+        <a href="#confiance">Confiance</a>
+        <a href="#marque">La marque</a>
+      </nav>
+      <button class="cart-button" type="button" data-cart-open aria-label="Ouvrir le panier">
+        Panier <span data-cart-count>0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/premium-collection.png" alt="" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Beauté premium, confiance royale</p>
+          <h1>LB COSMETICS</h1>
+          <p>
+            Une marque de luxe pensée pour sublimer la peau, les cheveux et la
+            confiance avec des rituels modernes, désirables et raffinés.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#boutique">Acheter maintenant</a>
+            <a class="button button-secondary" href="https://wa.me/237694783482" target="_blank" rel="noreferrer">
+              Commander sur WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="hero-strip">
+          <span>Sois Belle. Sois Reine.</span>
+          <span>Commande WhatsApp directe</span>
+          <span>Conseils personnalisés</span>
+          <span>Soins peau, corps & cheveux</span>
+        </div>
+      </section>
+
+      <section class="trust-band" aria-label="Avantages">
+        <div>
+          <strong>+27</strong>
+          <span>références beauté</span>
+        </div>
+        <div>
+          <strong>Premium</strong>
+          <span>soins, savons, sérums</span>
+        </div>
+        <div>
+          <strong>Direct</strong>
+          <span>commande via WhatsApp</span>
+        </div>
+        <div>
+          <strong>LB</strong>
+          <span>beauté, expertise, confiance</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="marque">
+        <div class="section-copy">
+          <p class="eyebrow">Maison LB COSMETICS</p>
+          <h2>Une beauté naturelle, élégante et assumée.</h2>
+        </div>
+        <p>
+          LB COSMETICS accompagne les femmes avec des rituels premium qui valorisent
+          la peau, le corps et les cheveux. La promesse est simple : offrir une
+          beauté visible, raffinée et accessible, avec une image de marque digne
+          d’une boutique internationale.
+        </p>
+      </section>
+
+      <section class="feature-grid" id="rituels">
+        <article class="feature feature-dark">
+          <div>
+            <p class="eyebrow">Rituel éclat</p>
+            <h3>Des soins visage & corps au fini lumineux.</h3>
+            <a href="#boutique" class="text-link">Acheter les soins</a>
+          </div>
+        </article>
+        <article class="feature feature-light">
+          <div>
+            <p class="eyebrow">Cheveux premium</p>
+            <h3>Perruques et textures sélectionnées pour un rendu sophistiqué.</h3>
+            <a href="#boutique" class="text-link">Voir les cheveux</a>
+          </div>
+        </article>
+        <article class="feature feature-gold">
+          <div>
+            <p class="eyebrow">Savons signature</p>
+            <h3>Des packs clairs pour commander vite et en confiance.</h3>
+            <a href="#boutique" class="text-link">Découvrir les savons</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section shop" id="boutique">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Boutique premium</p>
+            <h2>Produits prêts à commander</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtres produits">
+            <button class="filter is-active" type="button" data-filter="all">Tout</button>
+            <button class="filter" type="button" data-filter="soin">Soins</button>
+            <button class="filter" type="button" data-filter="savon">Savons</button>
+            <button class="filter" type="button" data-filter="cheveux">Cheveux</button>
+          </div>
+        </div>
+        <div class="product-grid" data-products></div>
+      </section>
+
+      <section class="product-detail" id="fiche-produit" data-detail hidden>
+        <button class="detail-close" type="button" data-detail-close>Fermer</button>
+        <div class="detail-layout">
+          <div class="detail-media">
+            <img data-detail-image alt="" />
+          </div>
+          <div class="detail-copy">
+            <p class="eyebrow" data-detail-category></p>
+            <h2 data-detail-title></h2>
+            <p data-detail-description></p>
+            <div class="detail-price" data-detail-price></div>
+            <div class="detail-panels">
+              <div>
+                <h3>Bénéfices</h3>
+                <ul data-detail-benefits></ul>
+              </div>
+              <div>
+                <h3>Utilisation</h3>
+                <p data-detail-usage></p>
+              </div>
+              <div>
+                <h3>Type conseillé</h3>
+                <p data-detail-skin></p>
+              </div>
+              <div>
+                <h3>Format</h3>
+                <p data-detail-size></p>
+              </div>
+            </div>
+            <div class="detail-actions">
+              <button class="button button-primary" type="button" data-detail-add>Ajouter au panier</button>
+              <a class="button button-whatsapp" data-detail-whatsapp target="_blank" rel="noreferrer">
+                Commander ce produit
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="recommended">
+          <p class="eyebrow">À associer avec</p>
+          <div class="recommended-grid" data-recommended></div>
+        </div>
+      </section>
+
+      <section class="confidence" id="confiance">
+        <div class="confidence-copy">
+          <p class="eyebrow">Acheter avec confiance</p>
+          <h2>Une expérience claire, humaine et rassurante.</h2>
+        </div>
+        <div class="confidence-grid">
+          <article>
+            <h3>Livraison suivie</h3>
+            <p>Chaque commande est confirmée directement sur WhatsApp avec les informations utiles.</p>
+          </article>
+          <article>
+            <h3>Paiement sécurisé</h3>
+            <p>Le paiement est organisé après confirmation de la disponibilité et du total.</p>
+          </article>
+          <article>
+            <h3>Conseil personnalisé</h3>
+            <p>Une recommandation peut être donnée selon l’objectif : éclat, hydratation, peau ou cheveux.</p>
+          </article>
+          <article>
+            <h3>Contact direct</h3>
+            <p>La cliente peut écrire à LB COSMETICS avant d’acheter pour être rassurée.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="lookbook" aria-label="Univers LB Cosmetics">
+        <div class="lookbook-copy">
+          <p class="eyebrow">Image de marque</p>
+          <h2>Une présence visuelle forte pour vendre avec confiance.</h2>
+          <p>
+            La marque se présente avec une voix féminine, élégante et ambitieuse :
+            moins de bruit visuel, plus de désir, plus de crédibilité.
+          </p>
+        </div>
+        <div class="lookbook-gallery">
+          <img class="look" src="assets/products/fondatrice-lb-noir.png" alt="Portrait premium LB COSMETICS" />
+          <img class="look" src="assets/products/fondatrice-lb-blanc.png" alt="Fondatrice LB COSMETICS" />
+          <img class="look look-original" src="assets/products/fondatrice-boutique-original.png" alt="Boutique LB COSMETICS" />
+        </div>
+      </section>
+
+      <section class="section results" id="resultats">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Résultats clients</p>
+            <h2>Avant / après, version premium</h2>
+          </div>
+          <p>
+            Les témoignages sont présentés de manière plus propre, plus calme et plus
+            crédible pour rassurer sans donner une impression de montage amateur.
+          </p>
+        </div>
+        <div class="result-grid">
+          <article class="result-card">
+            <img src="assets/products/resultat-cheveux-avant-apres.png" alt="Résultat cheveux avant après" />
+            <h3>Cheveux & confiance</h3>
+            <p>Un rendu témoignage plus clair pour valoriser la transformation.</p>
+          </article>
+          <article class="result-card">
+            <img src="assets/products/resultat-eclat-avant-apres.png" alt="Résultat éclat avant après" />
+            <h3>Éclat & uniformité</h3>
+            <p>Une preuve sociale sobre, lisible et adaptée à une marque premium.</p>
+          </article>
+          <article class="result-card">
+            <img src="assets/products/resultat-peau-avant-apres.png" alt="Résultat peau avant après" />
+            <h3>Routine peau</h3>
+            <p>Des visuels organisés pour rassurer avant la commande.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <p class="eyebrow">Avis clientes</p>
+        <div class="reviews-grid">
+          <blockquote>
+            <p>“J’ai été conseillée rapidement et j’ai su quoi choisir pour ma peau.”</p>
+            <cite>Amina · Douala</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Les produits donnent une vraie impression de qualité, le suivi est sérieux.”</p>
+            <cite>Clarisse · Yaoundé</cite>
+          </blockquote>
+          <blockquote>
+            <p>“La présentation est chic, on comprend vite quoi prendre et comment commander.”</p>
+            <cite>Nathalie · Cliente fidèle</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Le savon est bien présenté et le pack est intéressant pour revendre.”</p>
+            <cite>Sandrine · Revendeuse</cite>
+          </blockquote>
+          <blockquote>
+            <p>“J’aime le côté premium, ça donne confiance avant même d’écrire sur WhatsApp.”</p>
+            <cite>Mireille · Cliente</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Les soins sont faciles à choisir grâce aux explications par besoin.”</p>
+            <cite>Grâce · Routine éclat</cite>
+          </blockquote>
+          <blockquote>
+            <p>“La perruque a un rendu très naturel, exactement ce que je voulais.”</p>
+            <cite>Estelle · Cheveux premium</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Le contact WhatsApp simplifie tout, on peut poser une question avant de payer.”</p>
+            <cite>Diane · Commande directe</cite>
+          </blockquote>
+          <blockquote>
+            <p>“J’ai apprécié les conseils, surtout pour éviter de prendre n’importe quel produit.”</p>
+            <cite>Marina · Conseil peau</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Les visuels font vraiment marque sérieuse, pas simple page Facebook.”</p>
+            <cite>Linda · Avis boutique</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Les produits sont bien mis en valeur, ça donne envie de tester la routine complète.”</p>
+            <cite>Ornella · Routine corps</cite>
+          </blockquote>
+          <blockquote>
+            <p>“On sent une marque féminine, élégante et plus professionnelle.”</p>
+            <cite>Prisca · LB COSMETICS</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <p class="eyebrow">Conseil beauté</p>
+          <h2>Trouver le rituel LB adapté à votre objectif.</h2>
+          <p>
+            Peau lumineuse, corps hydraté, cheveux premium ou routine complète :
+            l’expérience d’achat guide chaque cliente vers le bon choix.
+          </p>
+        </div>
+        <a class="button button-primary" href="https://wa.me/237694783482" target="_blank" rel="noreferrer">
+          Écrire sur WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <img src="assets/logo-lb-cosmetics.png" alt="LB COSMETICS" />
+        <p>Sois Belle. Sois Reine.</p>
+        <p>La beauté commence par la confiance.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+237694783482">+237 694 78 34 82</a>
+        <a href="https://wa.me/237694783482" target="_blank" rel="noreferrer">Commander sur WhatsApp</a>
+      </div>
+      <div>
+        <h3>Boutique</h3>
+        <a href="#boutique">Soins</a>
+        <a href="#boutique">Savons</a>
+        <a href="#boutique">Cheveux</a>
+      </div>
+      <form class="newsletter">
+        <h3>Recevoir les offres</h3>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="Votre adresse email" />
+        </label>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </footer>
+
+    <aside class="cart-panel" data-cart aria-hidden="true">
+      <div class="cart-backdrop" data-cart-close></div>
+      <div class="cart-drawer">
+        <button class="cart-close" type="button" data-cart-close aria-label="Fermer le panier">×</button>
+        <p class="eyebrow">Votre sélection</p>
+        <h2>Panier LB COSMETICS</h2>
+        <div class="cart-items" data-cart-list></div>
+        <div class="cart-total">
+          <span>Total estimé</span>
+          <strong data-cart-total>0 FR</strong>
+        </div>
+        <p class="cart-note">
+          Les produits sans prix affiché seront confirmés directement sur WhatsApp.
+        </p>
+        <a class="button button-whatsapp" href="https://wa.me/237694783482" target="_blank" rel="noreferrer" data-whatsapp-order>
+          Commander sur WhatsApp
+        </a>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
