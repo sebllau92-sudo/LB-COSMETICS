@@ -834,7 +834,7 @@ blockquote {
 }
 
 blockquote::before {
-  content: "★★★★★ 5/5";
+  content: "★★★★★ 5/5 · Cliente vérifiée";
   display: block;
   margin-bottom: 16px;
   color: var(--gold);
