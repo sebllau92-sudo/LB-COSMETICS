@@ -772,6 +772,13 @@ input {
   grid-row: span 2;
 }
 
+.look-full {
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.06), rgba(200, 149, 47, 0.12));
+}
+
 .result-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
