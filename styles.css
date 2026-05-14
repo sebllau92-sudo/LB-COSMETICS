@@ -404,7 +404,7 @@ input {
 .feature-light::before {
   background:
     linear-gradient(0deg, rgba(246, 234, 215, 0.96), rgba(246, 234, 215, 0.55)),
-    url("assets/products/perruque-volume-curl.png") center / cover;
+    url("assets/products/lait-hydratant-vitamine-e-box.png") center / cover;
 }
 
 .feature-gold {
